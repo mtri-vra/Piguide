@@ -63,7 +63,7 @@ const RESTAURANTS = [
     scores: { food: 3.9, service: 4.2, space: 3.1 },
     featured: false,
     emoji: "🥩",
-    img: "/bun-cha-bach-dang/jpg",
+    img: "/bun-cha-bach-dang.jpg",
   },
 ];
 
