@@ -63,7 +63,7 @@ const RESTAURANTS = [
     scores: { food: 3.9, service: 4.2, space: 3.1 },
     featured: false,
     emoji: "🥩",
-    img: "/bun-cha-bach-dang.jpg",
+    img: "/bun-cha-bach-dang/jpg",
   },
 ];
 
@@ -76,8 +76,8 @@ function PiScoreBar({ label, value, max = 5, color }) {
   return (
     <div style={{ marginBottom: 10 }}>
       <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
-        <span style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 13, color: "#6b4f3a" }}>{label}</span>
-        <span style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 13, fontWeight: 700, color: "#c0622a" }}>{value} / {max}</span>
+        <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 13, color: "#6b4f3a" }}>{label}</span>
+        <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 13, fontWeight: 700, color: "#c0622a" }}>{value} / {max}</span>
       </div>
       <div style={{ height: 6, borderRadius: 99, background: "#f0e6da", overflow: "hidden" }}>
         <div style={{ height: "100%", width: `${pct}%`, borderRadius: 99, background: color, transition: "width 0.8s cubic-bezier(.4,0,.2,1)" }} />
@@ -90,7 +90,7 @@ function Badge({ icon, label, active }) {
   return (
     <span style={{
       display: "inline-flex", alignItems: "center", gap: 4, padding: "4px 10px",
-      borderRadius: 99, fontSize: 12, fontFamily: "'DM Sans', sans-serif", fontWeight: 500,
+      borderRadius: 99, fontSize: 12, fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: 500,
       background: active ? "#fdf0e6" : "#f5f5f5",
       color: active ? "#c0622a" : "#bbb",
       border: `1px solid ${active ? "#e8c4a0" : "#eee"}`,
@@ -116,26 +116,26 @@ function RestaurantCard({ r, onClick }) {
       <div style={{ position: "relative", height: 180, overflow: "hidden" }}>
         <img src={r.img} alt={r.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(60,30,10,0.6) 0%, transparent 60%)" }} />
-        <div style={{ position: "absolute", top: 12, right: 12, background: "#c0622a", color: "#fff", borderRadius: 8, padding: "4px 10px", fontFamily: "'Crimson Pro', Georgia, serif", fontWeight: 700, fontSize: 15 }}>
+        <div style={{ position: "absolute", top: 12, right: 12, background: "#c0622a", color: "#fff", borderRadius: 8, padding: "4px 10px", fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, fontSize: 15 }}>
           Pi {pi}
         </div>
         {r.featured && (
-          <div style={{ position: "absolute", top: 12, left: 12, background: "#f5c842", color: "#3d2000", borderRadius: 8, padding: "3px 10px", fontSize: 11, fontWeight: 700, fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.05em" }}>
+          <div style={{ position: "absolute", top: 12, left: 12, background: "#f5c842", color: "#3d2000", borderRadius: 8, padding: "3px 10px", fontSize: 11, fontWeight: 700, fontFamily: "'Be Vietnam Pro', sans-serif", letterSpacing: "0.05em" }}>
             ✦ NÊN THỬ
           </div>
         )}
         <div style={{ position: "absolute", bottom: 12, left: 14 }}>
-          <div style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 18, fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>{r.name}</div>
-          <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.85)", marginTop: 2 }}>{r.address} · {r.district}</div>
+          <div style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 18, fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>{r.name}</div>
+          <div style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.85)", marginTop: 2 }}>{r.address} · {r.district}</div>
         </div>
       </div>
       <div style={{ padding: "12px 14px" }}>
         <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 10 }}>
-          <span style={{ background: "#fdf0e6", color: "#c0622a", border: "1px solid #e8c4a0", borderRadius: 6, padding: "3px 8px", fontSize: 12, fontFamily: "'DM Sans', sans-serif", fontWeight: 600 }}>{r.type}</span>
-          <span style={{ background: "#f5f5f5", color: "#666", borderRadius: 6, padding: "3px 8px", fontSize: 12, fontFamily: "'DM Sans', sans-serif" }}>💰 {r.price}/người</span>
-          {r.badges.ac && <span style={{ background: "#e8f4fd", color: "#1a6fa8", borderRadius: 6, padding: "3px 8px", fontSize: 12, fontFamily: "'DM Sans', sans-serif" }}>❄ Điều hòa</span>}
+          <span style={{ background: "#fdf0e6", color: "#c0622a", border: "1px solid #e8c4a0", borderRadius: 6, padding: "3px 8px", fontSize: 12, fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: 600 }}>{r.type}</span>
+          <span style={{ background: "#f5f5f5", color: "#666", borderRadius: 6, padding: "3px 8px", fontSize: 12, fontFamily: "'Be Vietnam Pro', sans-serif" }}>💰 {r.price}/người</span>
+          {r.badges.ac && <span style={{ background: "#e8f4fd", color: "#1a6fa8", borderRadius: 6, padding: "3px 8px", fontSize: 12, fontFamily: "'Be Vietnam Pro', sans-serif" }}>❄ Điều hòa</span>}
         </div>
-        <div style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 13, color: "#8a6a55", lineHeight: 1.5 }}>
+        <div style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 13, color: "#8a6a55", lineHeight: 1.5 }}>
           Nên thử: <span style={{ fontWeight: 600, color: "#5a3620" }}>{r.mustTry.slice(0, 2).join(" · ")}{r.mustTry.length > 2 ? " ···" : ""}</span>
         </div>
       </div>
@@ -154,15 +154,15 @@ function DetailPage({ r, onBack }) {
         <button onClick={onBack} style={{
           position: "absolute", top: 20, left: 20, background: "rgba(255,255,255,0.15)", backdropFilter: "blur(8px)",
           border: "1px solid rgba(255,255,255,0.3)", color: "#fff", borderRadius: 10, padding: "8px 16px",
-          fontFamily: "'DM Sans', sans-serif", fontSize: 14, cursor: "pointer", display: "flex", alignItems: "center", gap: 6,
+          fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 14, cursor: "pointer", display: "flex", alignItems: "center", gap: 6,
         }}>← Quay lại</button>
         <div style={{ position: "absolute", bottom: 24, left: 24, right: 24 }}>
           <div style={{ display: "flex", gap: 8, marginBottom: 8, flexWrap: "wrap" }}>
-            <span style={{ background: "#c0622a", color: "#fff", borderRadius: 8, padding: "4px 12px", fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 700 }}>{r.type}</span>
-            {r.featured && <span style={{ background: "#f5c842", color: "#3d2000", borderRadius: 8, padding: "4px 12px", fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 700 }}>✦ NÊN THỬ</span>}
+            <span style={{ background: "#c0622a", color: "#fff", borderRadius: 8, padding: "4px 12px", fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 12, fontWeight: 700 }}>{r.type}</span>
+            {r.featured && <span style={{ background: "#f5c842", color: "#3d2000", borderRadius: 8, padding: "4px 12px", fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 12, fontWeight: 700 }}>✦ NÊN THỬ</span>}
           </div>
-          <h1 style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 28, fontWeight: 700, color: "#fff", margin: 0, lineHeight: 1.2 }}>{r.name}</h1>
-          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: "rgba(255,255,255,0.85)", margin: "6px 0 0" }}>📍 {r.address} · {r.district}</p>
+          <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 28, fontWeight: 700, color: "#fff", margin: 0, lineHeight: 1.2 }}>{r.name}</h1>
+          <p style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 14, color: "rgba(255,255,255,0.85)", margin: "6px 0 0" }}>📍 {r.address} · {r.district}</p>
         </div>
       </div>
 
@@ -172,15 +172,15 @@ function DetailPage({ r, onBack }) {
         <div style={{ background: "#fff", borderRadius: 16, padding: 24, margin: "24px 0", boxShadow: "0 2px 16px rgba(120,70,30,0.07)", border: "1px solid #f0e6da" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
             <div>
-              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", color: "#c0622a", textTransform: "uppercase", marginBottom: 4 }}>Pi Score</div>
+              <div style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", color: "#c0622a", textTransform: "uppercase", marginBottom: 4 }}>Pi Score</div>
               <div style={{ display: "flex", alignItems: "baseline", gap: 4 }}>
-                <span style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 52, fontWeight: 700, color: "#3d2000", lineHeight: 1 }}>{pi}</span>
-                <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, color: "#b09080" }}>/10</span>
+                <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 52, fontWeight: 700, color: "#3d2000", lineHeight: 1 }}>{pi}</span>
+                <span style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 16, color: "#b09080" }}>/10</span>
               </div>
             </div>
             <div style={{ textAlign: "right" }}>
-              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "#b09080", marginBottom: 4 }}>Trọng số</div>
-              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: "#8a6a55" }}>Đồ ăn 40% · Dịch vụ 30% · Không gian 30%</div>
+              <div style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 11, color: "#b09080", marginBottom: 4 }}>Trọng số</div>
+              <div style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 12, color: "#8a6a55" }}>Đồ ăn 40% · Dịch vụ 30% · Không gian 30%</div>
             </div>
           </div>
           <div style={{ width: "100%", height: 1, background: "#f0e6da", margin: "16px 0" }} />
@@ -191,19 +191,19 @@ function DetailPage({ r, onBack }) {
 
         {/* Editorial */}
         <div style={{ background: "#fff8f0", borderLeft: "4px solid #c0622a", borderRadius: "0 12px 12px 0", padding: "16px 20px", marginBottom: 24 }}>
-          <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", color: "#c0622a", textTransform: "uppercase", marginBottom: 8 }}>✦ Tại sao PiGuide chọn quán này</div>
-          <p style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 17, color: "#3d2000", lineHeight: 1.7, margin: 0 }}>{r.editorial}</p>
+          <div style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", color: "#c0622a", textTransform: "uppercase", marginBottom: 8 }}>✦ Tại sao PiGuide chọn quán này</div>
+          <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 17, color: "#3d2000", lineHeight: 1.7, margin: 0 }}>{r.editorial}</p>
         </div>
 
         {/* Món nên thử */}
         <div style={{ background: "#fff", borderRadius: 16, padding: 24, marginBottom: 24, boxShadow: "0 2px 16px rgba(120,70,30,0.07)", border: "1px solid #f0e6da" }}>
-          <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", color: "#c0622a", textTransform: "uppercase", marginBottom: 16 }}>Món nên thử</div>
+          <div style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", color: "#c0622a", textTransform: "uppercase", marginBottom: 16 }}>Món nên thử</div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
             {r.mustTry.map((m, i) => (
               <div key={i} style={{
                 background: "linear-gradient(135deg, #fdf0e6, #fae4d0)",
                 border: "1px solid #e8c4a0", borderRadius: 12, padding: "10px 16px",
-                fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 16, fontWeight: 600, color: "#5a3620",
+                fontFamily: "'Playfair Display', Georgia, serif", fontSize: 16, fontWeight: 600, color: "#5a3620",
               }}>
                 🍽 {m}
               </div>
@@ -213,7 +213,7 @@ function DetailPage({ r, onBack }) {
 
         {/* Tiện ích & Giá */}
         <div style={{ background: "#fff", borderRadius: 16, padding: 24, marginBottom: 24, boxShadow: "0 2px 16px rgba(120,70,30,0.07)", border: "1px solid #f0e6da" }}>
-          <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", color: "#c0622a", textTransform: "uppercase", marginBottom: 16 }}>Tiện ích & Chi phí</div>
+          <div style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", color: "#c0622a", textTransform: "uppercase", marginBottom: 16 }}>Tiện ích & Chi phí</div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 16 }}>
             <Badge icon="❄" label="Điều hòa" active={r.badges.ac} />
             <Badge icon="🚗" label="Đỗ ô tô" active={r.badges.parking} />
@@ -223,8 +223,8 @@ function DetailPage({ r, onBack }) {
           <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "12px 16px", background: "#fdf8f3", borderRadius: 10, border: "1px solid #f0e6da" }}>
             <span style={{ fontSize: 20 }}>💰</span>
             <div>
-              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "#b09080" }}>Khoảng giá / người</div>
-              <div style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 18, fontWeight: 700, color: "#3d2000" }}>{r.price}</div>
+              <div style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 11, color: "#b09080" }}>Khoảng giá / người</div>
+              <div style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 18, fontWeight: 700, color: "#3d2000" }}>{r.price}</div>
             </div>
           </div>
         </div>
@@ -236,7 +236,7 @@ function DetailPage({ r, onBack }) {
           style={{
             display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
             background: "#c0622a", color: "#fff", borderRadius: 14, padding: "16px 24px",
-            fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 16, textDecoration: "none",
+            fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: 700, fontSize: 16, textDecoration: "none",
             boxShadow: "0 4px 20px rgba(192,98,42,0.35)", transition: "transform 0.15s",
           }}
           onMouseEnter={e => e.currentTarget.style.transform = "scale(1.02)"}
@@ -279,14 +279,16 @@ export default function PiGuide() {
   const rest = filtered.filter(r => !r.featured);
 
   return (
-    <div style={{ minHeight: "100vh", background: "#fdf8f3", fontFamily: "'DM Sans', sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "#fdf8f3", fontFamily: "'Be Vietnam Pro', sans-serif" }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
         * { box-sizing: border-box; }
-        ::placeholder { color: #c4a992; }
+        ::placeholder { color: #c4a992; font-family: 'Be Vietnam Pro', sans-serif; }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #fdf8f3; }
         ::-webkit-scrollbar-thumb { background: #e8c4a0; border-radius: 3px; }
+        /* Override all number/body fonts globally */
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
       `}</style>
 
       {/* Header */}
@@ -298,11 +300,11 @@ export default function PiGuide() {
         <div style={{ position: "relative" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
             <span style={{ fontSize: 32 }}>🥢</span>
-            <span style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 42, fontWeight: 700, color: "#fff", letterSpacing: "-0.02em" }}>Pi</span>
-            <span style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 42, fontWeight: 400, color: "#f5c842", letterSpacing: "-0.02em" }}>Guide</span>
+            <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 42, fontWeight: 700, color: "#fff", letterSpacing: "-0.02em" }}>Pi</span>
+            <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 42, fontWeight: 400, color: "#f5c842", letterSpacing: "-0.02em" }}>Guide</span>
           </div>
-          <p style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 18, color: "rgba(255,255,255,0.8)", margin: "0 0 32px", fontStyle: "italic" }}>
-            Ăn đúng chỗ · Sống đúng vị · Hà Nội
+          <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 18, color: "rgba(255,255,255,0.8)", margin: "0 0 32px", fontStyle: "italic" }}>
+            Discovering the best bites
           </p>
 
           {/* Search bar */}
@@ -312,7 +314,7 @@ export default function PiGuide() {
               <input
                 value={search} onChange={e => setSearch(e.target.value)}
                 placeholder="Tìm quán, món ăn..."
-                style={{ flex: 1, border: "none", outline: "none", fontFamily: "'DM Sans', sans-serif", fontSize: 16, padding: "16px 0", background: "transparent", color: "#3d2000" }}
+                style={{ flex: 1, border: "none", outline: "none", fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 16, padding: "16px 0", background: "transparent", color: "#3d2000" }}
               />
               {search && (
                 <button onClick={() => setSearch("")} style={{ padding: "0 16px", background: "none", border: "none", cursor: "pointer", color: "#c4a992", fontSize: 18 }}>✕</button>
@@ -328,7 +330,7 @@ export default function PiGuide() {
           {/* District */}
           {districts.map(d => (
             <button key={d} onClick={() => setDistrict(d)} style={{
-              padding: "7px 16px", borderRadius: 99, fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap",
+              padding: "7px 16px", borderRadius: 99, fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 13, fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap",
               background: district === d ? "#c0622a" : "#fdf0e6",
               color: district === d ? "#fff" : "#c0622a",
               border: `1px solid ${district === d ? "#c0622a" : "#e8c4a0"}`,
@@ -338,20 +340,20 @@ export default function PiGuide() {
           <div style={{ width: 1, height: 24, background: "#f0e6da" }} />
           {/* Price */}
           <select value={filterPrice} onChange={e => setFilterPrice(e.target.value)} style={{
-            padding: "7px 12px", borderRadius: 99, border: "1px solid #e8c4a0", fontFamily: "'DM Sans', sans-serif",
+            padding: "7px 12px", borderRadius: 99, border: "1px solid #e8c4a0", fontFamily: "'Be Vietnam Pro', sans-serif",
             fontSize: 13, color: "#c0622a", background: "#fdf0e6", cursor: "pointer", outline: "none",
           }}>
             {priceOptions.map(p => <option key={p}>{p}</option>)}
           </select>
           {/* Toggles */}
           <button onClick={() => setFilterAC(v => !v)} style={{
-            padding: "7px 14px", borderRadius: 99, fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, cursor: "pointer",
+            padding: "7px 14px", borderRadius: 99, fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 13, fontWeight: 600, cursor: "pointer",
             background: filterAC ? "#e8f4fd" : "#f5f5f5",
             color: filterAC ? "#1a6fa8" : "#888",
             border: `1px solid ${filterAC ? "#a8d4f0" : "#eee"}`,
           }}>❄ Điều hòa</button>
           <button onClick={() => setFilterLate(v => !v)} style={{
-            padding: "7px 14px", borderRadius: 99, fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, cursor: "pointer",
+            padding: "7px 14px", borderRadius: 99, fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 13, fontWeight: 600, cursor: "pointer",
             background: filterLate ? "#f0eaff" : "#f5f5f5",
             color: filterLate ? "#6a3db8" : "#888",
             border: `1px solid ${filterLate ? "#c9b0f0" : "#eee"}`,
@@ -365,7 +367,7 @@ export default function PiGuide() {
         {filtered.length === 0 ? (
           <div style={{ textAlign: "center", padding: "60px 0" }}>
             <div style={{ fontSize: 48, marginBottom: 16 }}>🍽</div>
-            <p style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 20, color: "#8a6a55" }}>Không tìm thấy quán phù hợp.<br />Thử điều chỉnh bộ lọc nhé!</p>
+            <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 20, color: "#8a6a55" }}>Không tìm thấy quán phù hợp.<br />Thử điều chỉnh bộ lọc nhé!</p>
           </div>
         ) : (
           <>
@@ -373,7 +375,7 @@ export default function PiGuide() {
             {featured.length > 0 && (
               <div style={{ marginBottom: 40 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c0622a" }}>✦ Nên thử tuần này</span>
+                  <span style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c0622a" }}>✦ Nên thử tuần này</span>
                   <div style={{ flex: 1, height: 1, background: "#f0e6da" }} />
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>
@@ -386,7 +388,7 @@ export default function PiGuide() {
             {rest.length > 0 && (
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-                  <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8a6a55" }}>Tất cả quán</span>
+                  <span style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8a6a55" }}>Tất cả quán</span>
                   <div style={{ flex: 1, height: 1, background: "#f0e6da" }} />
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>
@@ -399,8 +401,8 @@ export default function PiGuide() {
 
         {/* Footer */}
         <div style={{ textAlign: "center", marginTop: 64, paddingTop: 32, borderTop: "1px solid #f0e6da" }}>
-          <div style={{ fontFamily: "'Crimson Pro', Georgia, serif", fontSize: 22, color: "#c0622a", marginBottom: 8 }}>🥢 PiGuide</div>
-          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, color: "#b09080" }}>
+          <div style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 22, color: "#c0622a", marginBottom: 8 }}>🥢 PiGuide</div>
+          <p style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontSize: 13, color: "#b09080" }}>
             Tất cả quán được đội ngũ PiGuide trực tiếp trải nghiệm và đánh giá.<br />
             Không nhận tiền từ quán để ưu tiên hiển thị.
           </p>
