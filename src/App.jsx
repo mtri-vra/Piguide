@@ -15,7 +15,7 @@ const RESTAURANTS = [
     scores: { food: 4.2, service: 3.5, space: 3.0 },
     featured: true,
     emoji: "🍜",
-    img: "https://images.unsplash.com/photo-1555126634-323283e090fa?w=800&q=80",
+    img: "/pho-khoi-hoi.jpg",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const RESTAURANTS = [
     scores: { food: 4.0, service: 3.8, space: 3.2 },
     featured: true,
     emoji: "🐔",
-    img: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
+    img: "/pho-ga-to-hien-thanh.jpg",
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const RESTAURANTS = [
     scores: { food: 4.1, service: 3.3, space: 2.8 },
     featured: false,
     emoji: "🐟",
-    img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80",
+    img: "/bun-ca-cham-tay-son.jpg",
   },
   {
     id: 4,
@@ -63,7 +63,7 @@ const RESTAURANTS = [
     scores: { food: 3.9, service: 4.2, space: 3.1 },
     featured: false,
     emoji: "🥩",
-    img: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
+    img: "/bun-cha-bach-dang.jpg",
   },
 ];
 
